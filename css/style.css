@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/*ESTILOS PARA TODOS LOS ELEMENTOS HTML*/
+3@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/*ESTILOS PARA TODOS LOS ELEMENTOS HTML*/
 *
 {
 	/*box-sizing sirve para cuando le agregemos espacios internos no se hagan crecer
@@ -107,7 +107,7 @@ text-align: center;
   position: fixed;
   bottom: 0;
     width: 31%;
-  right: 0;
+  right: 2;
 }
 
 .footer a {
