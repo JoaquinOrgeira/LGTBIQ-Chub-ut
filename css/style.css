@@ -36,7 +36,7 @@ header .container{
 }
 
 header .container a{
-color: white;
+color: #a51d2d;
 text-decoration: none;
 margin-left:15px;
 margin-right: 15px;
@@ -331,7 +331,7 @@ position: fixed;
 width: 100%;
 height: 100%;
 
-background-color: #a51d2d;
+background-color: ;
 padding-top: 80px;
 padding-bottom: 80px;
 padding-left: 15px;
