@@ -158,6 +158,7 @@ overflow-x: hidden;
 text-align: center;
 position: relative;
 left: 2;
+width: 100%;
 }
 body h2{
   width: 100%;
