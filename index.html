@@ -1,75 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Soluciones gráficas personalizadas en vinilo, banner, ploteado vehicular, panfletería, talonarios, etiquetas y mucho mas. Chubut [Presupuestos x Whattsapp ---> 2804571979]">
-    <meta name="keywords" content="diseño grafico, diseño web, almanaques, diseño web, paginas web, websites, sites, páginas web, Esquel">
-    <title>Inicio-LGTBIQ+CHUBUT</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="shortcut icon" href="img/chubbicorns-chubbicorn.gif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenides!</title>
+        <link rel="shortcut icon" href="img/chubbicorns-chubbicorn.gif">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #ffadad; /* Fondo rosado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .loading-icon img {
+            width: 200px; /* Ajusta el tamaño del GIF según sea necesario */
+        }
+    </style>
 </head>
 <body>
-  <div id="inicio">
-            <header>
-                <div class="container">
-                    <nav>
-                        <a href="index.html">Inicio</a>
-                        <a href="actividades.html">¿Actividades?</a>
-                        <a href="participa.html">¿Querés participar?</a>
-                        <a href="#album.html">Album</a>
-                    </nav>
-                    <a class="hamb"><i class="fa-solid fa-rainbow"></i></a> 
-                </div>
-            </header>
+    <div id="app">
+        <div class="loading-icon">
+            <img src="img/unicorn2.gif" alt="Loading...">
         </div>
-        <main>
-            <div class="landingtext">
-                <div class="container2">
-                    <a href="#aa"><img class="image" id="myImage" src="img/unicorn2.gif"></a>
-                    <div class="titulo"><h1>LGTBIQ+<br>Chubut</h1></div> 
-                </div>
-            </div>
-            <div id="seccion1" class="seccion1">
-                <h2>La diversidad en Chubut</h2>
-                <h3>Explora espacios inclusivos y eventos que celebran la diversidad. En la provincia de Chubut, la comunidad LGTBIQ+ florece.</h3>
-            </div>
-            <div id="seccion2" class="seccion2">
-                <h2>Conexiones auténticas</h2>
-                <h3>Encontrá apoyo y solidaridad. Descubrí la red de conexiones que fortalecen la comunidad en Chubut.<br>Contactos:</h3>  
-            </div>
-            <div id="seccion3" class="seccion3">
-                <h2>Actividades</h2>
-                <h3>Unite a nuestras iniciativas que promueven el crecimiento personal y colectivo de la comunidad LGTBIQ+.</h3>  
-            </div>
-            <div id="seccion4" class="seccion4">
-                <h2>Visibilidad y respeto</h2>
-            </div>
-            <div id="seccion5" class="seccion5">
-                <h2>Apoyo y comunidad</h3>
-            </div>
-            <div id="seccion6" class="seccion6">
-                <h2>Espacios seguros</h2>
-            </div>
-            <div id="seccion7" class="seccion7">
-                <h2>Unides en la diversidad</h2>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-                <a href="https://www.facebook.comuntoNaranja" target="_blank"><i class="icon fab fa-facebook"></i></a>
-                <a href="https://www.instagram.comuntoNaranja" target="_blank"><i class="icon fab fa-instagram"></i></a>
-                <a href="mailto:comunidadlgbtiq@gmail.com"><i class="icon fas fa-envelope"></i></a>
-                <a href="https://wa.me/XXXXXXXXXX?text=Hola%20les%20escribo%20desde%20su%20página%20web%20para:" target="_blank"><i class="icon fa-brands fa-whatsapp"></i></a>
-            </div>
-            <a href="puntonaranja.com.ar">@Joaco</a>
-        </footer>
-</div>
-
-<script src="js/jquery.js"></script>
-<script src="js/funciones.js"></script>
-<script src="https://kit.fontawesome.com/85f2aa691b.js" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            mounted() {
+                // Redirige a 'inicio.html' después de 4 segundos
+                setTimeout(() => {
+                    window.location.href = 'inicio.html';
+                }, 2000); // 4000 milisegundos = 4 segundos
+            }
+        });
+    </script>
 </body>
 </html>
