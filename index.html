@@ -12,20 +12,16 @@
     <link rel="shortcut icon" href="img/logo3.png">
 </head>
 <body>
-<div id="inicio">
-    <loading-icon v-if="loading"></loading-icon>
-    <div v-else>
-        <div id="inicio">
+  <div id="inicio">
             <header>
                 <div class="container">
                     <nav>
                         <a href="index.html">Inicio</a>
                         <a href="actividades.html">¿Actividades?</a>
                         <a href="participa.html">¿Querés participar?</a>
-                        <a href="#album.html">Album</a> 
-                        <a class="hamb"><i class="fa-solid fa-rainbow"></i></a> 
+                        <a href="#album.html">Album</a>
                     </nav>
-                   
+                    <a class="hamb"><i class="fa-solid fa-rainbow"></i></a> 
                 </div>
             </header>
         </div>
@@ -63,33 +59,15 @@
         </main>
         <footer>
             <div class="footer">
-                <a href="" target="_blank"><i class="icon fab fa-facebook"></i></a>
-                <a href="" target="_blank"><i class="icon fab fa-instagram"></i></a>
-                <a href=""><i class="icon fas fa-envelope"></i></a>
+                <a href="https://www.facebook.comuntoNaranja" target="_blank"><i class="icon fab fa-facebook"></i></a>
+                <a href="https://www.instagram.comuntoNaranja" target="_blank"><i class="icon fab fa-instagram"></i></a>
+                <a href="mailto:comunidadlgbtiq@gmail.com"><i class="icon fas fa-envelope"></i></a>
                 <a href="https://wa.me/XXXXXXXXXX?text=Hola%20les%20escribo%20desde%20su%20página%20web%20para:" target="_blank"><i class="icon fa-brands fa-whatsapp"></i></a>
             </div>
             <a href="puntonaranja.com.ar">@Joaco</a>
         </footer>
-    </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script>
-    Vue.component('loading-icon', {
-        template: '<div class="loading-icon"><img src="img/unicorn2.gif" alt="Loading..."></div>'
-    });
 
-    new Vue({
-        el: '#inicio',
-        data: {
-            loading: true
-        },
-        mounted() {
-            setTimeout(() => {
-                this.loading = false;
-            }, 6000); // Simula una carga de 3 segundos
-        }
-    });
-</script>
 <script src="js/jquery.js"></script>
 <script src="js/funciones.js"></script>
 <script src="https://kit.fontawesome.com/85f2aa691b.js" crossorigin="anonymous"></script>
