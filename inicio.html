@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="shortcut icon" href="img/chubbicorns-chubbicorn.gif">
+    <link rel="shortcut icon" href="img/loadcat.gif">
 </head>
 <body>
   <div id="inicio">
@@ -21,14 +21,16 @@
                         <a href="participa.html">Participar</a>
                         <a href="#album.html">Album</a>
                     </nav>
+                     <div class="icono-container">
                     <a class="hamb"><i class="fa-solid fa-rainbow"></i></a> 
+                      <div class="alt-text"><img src="img/chubbicorns-chubbicorn.gif"> ¡Click!</div>
                 </div>
             </header>
         </div>
         <main>
             <div class="landingtext">
                 <div class="container2">
-                    <a href="index.html"><img class="image" id="myImage" src="img/dibujo.svg"></a>
+                    <img class="image" id="myImage" src="img/dibujo.png">
                     <div class="titulo"><h1>LGTBIQ+<br>Chubut</h1></div> 
                 </div>
             </div>
@@ -67,7 +69,22 @@
             <a href="puntonaranja.com.ar">@Joaco</a>
         </footer>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const iconoContainer = document.querySelector('.icono-container');
 
+    // Mostrar el texto "alt" después de 3 segundos
+    setTimeout(() => {
+        iconoContainer.classList.add('show-alt');
+
+        // Ocultar el texto "alt" después de 3 segundos más
+        setTimeout(() => {
+            iconoContainer.classList.remove('show-alt');
+        }, 3000); // 3000 milisegundos = 3 segundos
+    }, 3000); // 3000 milisegundos = 3 segundos
+});
+
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/funciones.js"></script>
 <script src="https://kit.fontawesome.com/85f2aa691b.js" crossorigin="anonymous"></script>
