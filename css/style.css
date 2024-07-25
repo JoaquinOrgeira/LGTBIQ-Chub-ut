@@ -64,6 +64,7 @@ font-size: 22px;
   transform: translate(-50%, -50%);
   height: 194px;
 border-radius: 44px;
+box-shadow: 60px -16px teal;
 }
 
 
