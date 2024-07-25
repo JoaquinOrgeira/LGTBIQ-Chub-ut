@@ -1,42 +1,72 @@
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenides!</title>
+    <link rel="shortcut icon" href="img/chubbicorns-chubbicorn.gif">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #ffadad; /* Fondo rosado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita scroll si el mensaje se desborda */
+        }
+        .loading-icon {
+            text-align: center;
+        }
+        .loading-icon img {
+            width: 100px; /* Ajusta el tamaño del GIF según sea necesario */
+        }
+        .alt-text {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff; /* Color celeste */
+            background-color: rgba(173, 216, 230, 0.5); /* Fondo transparente celeste */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .show-alt {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="loading-icon">
+            <a href="inicio.html"></a><img src="img/unicorn2.gif" alt=""></div>
+            <div class="alt-text">¡Dar click!</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new Vue({
-                el: '#app',
-                data() {
-                    return {
-                        timer: null
-                    };
-                },
-                mounted() {
-                    // Manejar la redirección al cargar la página
-                    this.handleRedirection();
+        new Vue({
+            el: '#app',
+            mounted() {
+                // Mostrar el texto "alt" después de 3 segundos
+                setTimeout(() => {
+                    document.querySelector('.alt-text').classList.add('show-alt');
 
-                    // Manejar la redirección al navegar hacia atrás
-                    window.addEventListener('popstate', this.handlePopState);
-                },
-                beforeDestroy() {
-                    window.removeEventListener('popstate', this.handlePopState);
-                    clearTimeout(this.timer);
-                },
-                methods: {
-                    handleRedirection() {
-                        // Limpia el temporizador existente
-                        clearTimeout(this.timer);
+                    // Ocultar el texto "alt" después de 3 segundos más
+                    setTimeout(() => {
+                        document.querySelector('.alt-text').classList.remove('show-alt');
+                    }, 9000); // 3000 milisegundos = 3 segundos
 
-                        // Agrega una entrada al historial del navegador
-                        history.replaceState(null, null, location.href);
+                }, 2000); // 3000 milisegundos = 3 segundos
 
-                        // Inicia el temporizador de redirección
-                        this.timer = setTimeout(() => {
-                            window.location.href = 'inicio.html';
-                        }, 4000); // 4000 milisegundos = 4 segundos
-                    },
-                    handlePopState() {
-                        // Re-inicia la redirección cuando se navega hacia atrás
-                        this.handleRedirection();
-                    }
-                }
-            });
+                // Redirige a 'inicio.html' después de 4 segundos
+                setTimeout(() => {
+                    window.location.href = 'inicio.html';
+                }, 4000); // 4000 milisegundos = 4 segundos
+            }
         });
     </script>
+</body>
+</html>
