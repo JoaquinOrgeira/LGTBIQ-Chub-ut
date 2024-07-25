@@ -1,43 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Bienvenides!</title>
-        <link rel="shortcut icon" href="img/chubbicorns-chubbicorn.gif">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-color: #ffadad; /* Fondo rosado */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
-        .loading-icon img {
-            width: 100px; /* Ajusta el tamaño del GIF según sea necesario */
-        }
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="loading-icon">
-            <a href="inicio.html"><img src="img/unicorn2.gif" alt="Loading..."></a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    
     <script>
-        new Vue({
-            el: '#app',
-            mounted() {
-                // Redirige a 'inicio.html' después de 4 segundos
-                setTimeout(() => {
-                    window.location.href = 'inicio.html';
-                }, 3000); // 4000 milisegundos = 4 segundos
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        timer: null
+                    };
+                },
+                mounted() {
+                    // Manejar la redirección al cargar la página
+                    this.handleRedirection();
+
+                    // Manejar la redirección al navegar hacia atrás
+                    window.addEventListener('popstate', this.handlePopState);
+                },
+                beforeDestroy() {
+                    window.removeEventListener('popstate', this.handlePopState);
+                    clearTimeout(this.timer);
+                },
+                methods: {
+                    handleRedirection() {
+                        // Limpia el temporizador existente
+                        clearTimeout(this.timer);
+
+                        // Agrega una entrada al historial del navegador
+                        history.replaceState(null, null, location.href);
+
+                        // Inicia el temporizador de redirección
+                        this.timer = setTimeout(() => {
+                            window.location.href = 'inicio.html';
+                        }, 4000); // 4000 milisegundos = 4 segundos
+                    },
+                    handlePopState() {
+                        // Re-inicia la redirección cuando se navega hacia atrás
+                        this.handleRedirection();
+                    }
+                }
+            });
         });
     </script>
-</body>
-</html>
