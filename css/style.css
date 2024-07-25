@@ -59,13 +59,11 @@ font-size: 22px;
 	    }
 
 .image {
-      position: absolute;
-top: 39vh;
-  left: 50%;
-transform: translate(-50%, -50%);
-height: 304px;
-transition: all 0.5s ease;
-border-radius: 15px;
+  position: absolute;
+  top: 40vh;
+  transform: translate(-50%, -50%);
+  height: 194px;
+border-radius: 44px;
 }
 
 
@@ -92,8 +90,6 @@ padding: 18Px;
 }
 h1{
 	color: white; 
-
-   margin: 2.67em 0;
 
 }
 
@@ -317,6 +313,10 @@ header .hamb{
 display: none;
 }
 
+.icono-container {
+ display: none;
+}
+
 @media(max-width: 1100px){
 
 header .hamb{
@@ -374,6 +374,34 @@ header {
   display: inline;
   z-index: 300;
 }
+.icono-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icono {
+    font-size: 50px; 
+    /* Ajusta el tamaño del icono */
+}
+.alt-text img{
+  width: 20px;
+}
+.alt-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Aparece a la izquierda del icono */
+    transform: translateY(-50%);
+    background-color: rgba(173, 216, 230, 0.7); /* Fondo transparente celeste */
+    color: magenta;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.icono-container.show-alt .alt-text {
+    display: block;
+}
 
 }
 .loading-icon {
@@ -385,5 +413,6 @@ header {
 }
 
 .loading-icon img {
- 
+ height: ;
 }
+
